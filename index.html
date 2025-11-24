@@ -4,218 +4,219 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>
-        <span class="icon">🎨</span>
-        Etch a Sketch
-      </h1>
-      <p class="subtitle">Draw an create your digital art</p>
-    </header>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          <span class="icon">🎨</span>
+          Etch a Sketch
+        </h1>
+        <p class="subtitle">Draw an create your digital art</p>
+      </header>
 
-    <!-- Toolbar section -->
-    <div class="toolbar">
-      <!-- Tools section -->
-      <div class="toolbar-section">
-        <h3 class="section-title">tools</h3>
-        <div class="tool-buttons">
-          <button
-            id="toolBrush"
-            class="tool-btn active"
-            aria-label="Brush"
-            aria-pressed="true"
-            data-tool="brush"
-          >
-            <span class="tool-icon">✏️</span>
-            <span class="tool-label">Brush</span>
-          </button>
-          <button
-            id="toolEraser"
-            class="tool-btn"
-            aria-label="Eraser"
-            aria-pressed="false"
-            data-tool="eraser"
-          >
-            <span class="icon">🩹</span>
-            Eraser
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Color section -->
-    <div class="toolbar-section color-section" id="colorSection">
-      <h3 class="section-title">color</h3>
-      <div class="color-controls">
-        <div class="color-picker-wrapper">
-          <input
-            type="color"
-            id="colorPicker"
-            class="color-picker"
-            value="#000000"
-            aria-label="Select color"
-          />
-          <label for="color-picker" class="color-label">
-            <span class="color-preview" id="colorPreview"></span>
-            <span class="color-value" id="colorValue">#000000</span>
-          </label>
-        </div>
-        <div class="color-palette">
-          <button
-            class="color-preset"
-            data-color="#000000"
-            style="background: #000000"
-            aria-label="Negro"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#e74c3c"
-            style="background: #e74c3c"
-            aria-label="Rojo"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#f39c12"
-            style="background: #f39c12"
-            aria-label="Naranja"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#f1c40f"
-            style="background: #f1c40f"
-            aria-label="Amarillo"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#2ecc71"
-            style="background: #2ecc71"
-            aria-label="Verde"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#3498db"
-            style="background: #3498db"
-            aria-label="Azul"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#9b59b6"
-            style="background: #9b59b6"
-            aria-label="Morado"
-          ></button>
-          <button
-            class="color-preset"
-            data-color="#ffffff"
-            style="background: #ffffff; border: 1px solid #ddd"
-            aria-label="Blanco"
-          ></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Size stroke section -->
-    <div class="toolbar-section">
-      <h3 class="section-title">stroke size</h3>
-      <div class="size-control">
-        <div class="size-slider-wrapper">
-          <input
-            type="range"
-            id="sizeSlider"
-            class="size-slider"
-            min="1"
-            max="50"
-            value="5"
-            aria-label="Stroke size slider"
-            aria-valuemin="1"
-            aria-valuemax="50"
-            aria-valuenow="5"
-          />
-          <div class="size-display">
-            <span id="sizeValue">5</span>
-            <span class="sizeUnit">px</span>
+      <!-- Toolbar section -->
+      <div class="toolbar">
+        <!-- Tools section -->
+        <div class="toolbar-section">
+          <h3 class="section-title">tools</h3>
+          <div class="tool-buttons">
+            <button
+              id="toolBrush"
+              class="tool-btn active"
+              aria-label="Brush"
+              aria-pressed="true"
+              data-tool="brush"
+            >
+              <span class="tool-icon">✏️</span>
+              <span class="tool-label">Brush</span>
+            </button>
+            <button
+              id="toolEraser"
+              class="tool-btn"
+              aria-label="Eraser"
+              aria-pressed="false"
+              data-tool="eraser"
+            >
+              <span class="tool-icon">🩹</span>
+              <span class="tool-label">Eraser</span>
+            </button>
           </div>
         </div>
-        <div class="size-preview">
-          <div id="sizePreviewCircle" class="preview-circle"></div>
+
+        <!-- Color section -->
+        <div class="toolbar-section color-section" id="colorSection">
+          <h3 class="section-title">color</h3>
+          <div class="color-controls">
+            <div class="color-picker-wrapper">
+              <input
+                type="color"
+                id="colorPicker"
+                class="color-picker"
+                value="#000000"
+                aria-label="Select color"
+              />
+              <label for="color-picker" class="color-label">
+                <span class="color-preview" id="colorPreview"></span>
+                <span class="color-value" id="colorValue">#000000</span>
+              </label>
+            </div>
+            <div class="color-palette">
+              <button
+                class="color-preset"
+                data-color="#000000"
+                style="background: #000000"
+                aria-label="Negro"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#e74c3c"
+                style="background: #e74c3c"
+                aria-label="Rojo"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#f39c12"
+                style="background: #f39c12"
+                aria-label="Naranja"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#f1c40f"
+                style="background: #f1c40f"
+                aria-label="Amarillo"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#2ecc71"
+                style="background: #2ecc71"
+                aria-label="Verde"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#3498db"
+                style="background: #3498db"
+                aria-label="Azul"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#9b59b6"
+                style="background: #9b59b6"
+                aria-label="Morado"
+              ></button>
+              <button
+                class="color-preset"
+                data-color="#ffffff"
+                style="background: #ffffff; border: 1px solid #ddd"
+                aria-label="Blanco"
+              ></button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Action section -->
-    <div class="toolbar-section actions-section">
-      <h3 class="section-title">Actions</h3>
-      <div class="action-buttons">
-        <!-- Delete canvas button -->
-        <button
-          id="btnClear"
-          class="action-btn btn-clear"
-          aria-label="Clear Canvas"
-        >
-          <span class="btn-icon">🗑️</span>
-          <span class="btn-label">Clean</span>
-        </button>
-        <!-- Save canvas button -->
-        <button
-          id="btnSave"
-          class="action-btn btn-save"
-          aria-label="Save Drawing"
-        >
-          <span class="btn-icon">💾</span>
-          <span class="btn-label">Save</span>
-        </button>
+        <!-- Size stroke section -->
+        <div class="toolbar-section">
+          <h3 class="section-title">stroke size</h3>
+          <div class="size-control">
+            <div class="size-slider-wrapper">
+              <input
+                type="range"
+                id="sizeSlider"
+                class="size-slider"
+                min="1"
+                max="50"
+                value="5"
+                aria-label="Stroke size slider"
+                aria-valuemin="1"
+                aria-valuemax="50"
+                aria-valuenow="5"
+              />
+              <div class="size-display">
+                <span id="sizeValue">5</span>
+                <span class="sizeUnit">px</span>
+              </div>
+            </div>
+            <div class="size-preview">
+              <div id="sizePreviewCircle" class="preview-circle"></div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Undo canvas button -->
-        <button
-          id="btnUndo"
-          class="action-btn btn-undo"
-          aria-label="Undo Last Action"
-        >
-          <span class="btn-icon">↶</span>
-          <span class="btn-label">Undo</span>
-        </button>
-      </div>
-    </div>
+        <!-- Action section -->
+        <div class="toolbar-section actions-section">
+          <h3 class="section-title">Actions</h3>
+          <div class="action-buttons">
+            <!-- Delete canvas button -->
+            <button
+              id="btnClear"
+              class="action-btn btn-clear"
+              aria-label="Clear Canvas"
+            >
+              <span class="btn-icon">🗑️</span>
+              <span class="btn-label">Clean</span>
+            </button>
+            <!-- Save canvas button -->
+            <button
+              id="btnSave"
+              class="action-btn btn-save"
+              aria-label="Save Drawing"
+            >
+              <span class="btn-icon">💾</span>
+              <span class="btn-label">Save</span>
+            </button>
 
-    <!-- Canvas area for drawing -->
-    <div class="canvas-container">
-      <div class="canvas-wrapper">
-        <canvas
-          id="drawingCanvas"
-          class="drawing-canvas"
-          width="800"
-          height="600"
-          aria-label="Drawing canvas"
-        ></canvas>
-        <!-- Message when canvas is empty -->
-        <div class="canvas-placeholder" id="canvasPlaceholder">
-          <div class="placeholder-content">
-            <span class="placeholder-icon">✏️</span>
-            <p class="placeholder-text">Haz clic y arrastra para dibujar</p>
+            <!-- Undo canvas button -->
+            <button
+              id="btnUndo"
+              class="action-btn btn-undo"
+              aria-label="Undo Last Action"
+            >
+              <span class="btn-icon">↶</span>
+              <span class="btn-label">Undo</span>
+            </button>
           </div>
         </div>
       </div>
-      
-      <!-- Info of the Canvas -->
-      <div class="canvas-info">
-        <span class="info-item">
+
+      <!-- Canvas area for drawing -->
+      <div class="canvas-container">
+        <div class="canvas-wrapper">
+          <canvas
+            id="drawingCanvas"
+            class="drawing-canvas"
+            width="800"
+            height="600"
+            aria-label="Drawing canvas"
+          ></canvas>
+          <!-- Message when canvas is empty -->
+          <div class="canvas-placeholder" id="canvasPlaceholder">
+            <div class="placeholder-content">
+              <span class="placeholder-icon">✏️</span>
+              <p class="placeholder-text">Haz clic y arrastra para dibujar</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info of the Canvas -->
+        <div class="canvas-info">
+          <span class="info-item">
             <span class="info-label">Resolution:</span>
-            <span class="info-value" id="canvasResolution">800 x 600</span>
-        </span>
-        <span class="info-item">
+            <span class="info-value" id="canvasResolution">800 x 600px</span>
+          </span>
+          <span class="info-item">
             <span class="info-label">Tool:</span>
             <span class="info-value" id="currentTool">Brush</span>
-        </span>
-        
+          </span>
+        </div>
       </div>
+      <footer class="footer">
+        <p>
+          Use the <strong>mouse</strong> for drawing. Click <kbd>Ctrl</kbd> +
+          <kbd>Z</kbd> to undo last action.
+        </p>
+      </footer>
     </div>
-
-    <footer>
-      <p>
-        Use the <strong>mouse</strong> for drawing. Click <kbd>Ctrl</kbd> +
-        <kbd>Z</kbd> to undo last action.
-      </p>
-    </footer>
   </body>
 </html>
